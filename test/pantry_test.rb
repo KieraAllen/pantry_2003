@@ -20,17 +20,11 @@ class PantryTest < Minitest::Test
   end
 
   def test_it_can_check_for_ingredient
-
+    # require "pry"; binding.pry
+    assert_equal 0, @pantry.stock_check(@ingredient1)
   end
 end
 
-
-# pry(main)>
-# # => #<Ingredient:0x007fd88582ed98...>
-
-# pry(main)> pantry.stock_check(ingredient1)
-# # => 0
-#
 # pry(main)> pantry.restock(ingredient1, 5)
 #
 # pry(main)> pantry.restock(ingredient1, 10)
