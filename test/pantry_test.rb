@@ -8,7 +8,7 @@ class PantryTest < Minitest::Test
   def setup
     @ingredient1 = Ingredient.new({name: "Cheese", unit: "oz", calories: 50})
     @ingredient2 = Ingredient.new({name: "Macaroni", unit: "oz", calories: 200})
-    @pantry = pantry = Pantry.new
+    @pantry = Pantry.new
   end
 
   def test_it_exists
@@ -30,7 +30,7 @@ class PantryTest < Minitest::Test
     assert_equal 15, @pantry.stock_check(@ingredient1)
 
     @pantry.restock(@ingredient2, 7)
-    
+
     assert_equal 7, @pantry.stock_check(@ingredient2)
   end
 end
