@@ -15,7 +15,7 @@ NOTE: In order to earn points, methods must be tested appropriately and implemen
 
 ```markdown
 There are **4** Possible Points in Iteration 1:
-1. Ingredient Creation - including all attr_readers 
+1. Ingredient Creation - including all attr_readers
 2. Pantry Creation - including all attr_readers
 3. Pantry #check_stock
 4. Pantry #restock
