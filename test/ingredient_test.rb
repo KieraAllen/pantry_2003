@@ -17,7 +17,7 @@ class IngredientTest < Minitest::Test
   end
 end
 
-# pry(main)> ingredient2 = Ingredient.new("Macaroni", "oz", 200)
+# pry(main)> ingredient2 = Ingredient.new({"Macaroni", "oz", 200})
 # # => #<Ingredient:0x007fd88582ed98...>
 #
 # pry(main)> pantry = Pantry.new
