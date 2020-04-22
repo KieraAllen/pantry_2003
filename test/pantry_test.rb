@@ -8,20 +8,17 @@ class PantryTest < Minitest::Test
     pantry = pantry = Pantry.new
     assert_instance_of Pantry, pantry
   end
+
+  def test_it_starts_with_no_stock
+    pantry = Pantry.new
+    assert_equal ({}), pantry.stock
+  end
 end
 
 
 # pry(main)> ingredient2 = Ingredient.new({name: "Macaroni", unit: "oz", calories: 200})
 # # => #<Ingredient:0x007fd88582ed98...>
 
-
-#
-# pry(main)> pantry = Pantry.new
-# # => #<Pantry:0x007fd8858863b8...>
-#
-# pry(main)> pantry.stock
-# # => {}
-#
 # pry(main)> pantry.stock_check(ingredient1)
 # # => 0
 #
