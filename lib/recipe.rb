@@ -6,4 +6,8 @@ class Recipe
     @name = name
     @ingredients_required = {}
   end
+
+  def add_ingredient(ingredient, amount)
+    # need ingredient as key, amount as value
+  end
 end
