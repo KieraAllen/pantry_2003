@@ -1,22 +1,31 @@
 require "minitest/autorun"
 require "minitest/pride"
 require './lib/pantry'
+require "./lib/ingredient"
 
 class PantryTest < Minitest::Test
 
+  def setup
+    @ingredient1 = Ingredient.new({name: "Cheese", unit: "oz", calories: 50})
+    @ingredient2 = Ingredient.new({name: "Macaroni", unit: "oz", calories: 200})
+    @pantry = pantry = Pantry.new
+  end
+
   def test_it_exists
-    pantry = pantry = Pantry.new
-    assert_instance_of Pantry, pantry
+    assert_instance_of Pantry, @pantry
   end
 
   def test_it_starts_with_no_stock
-    pantry = Pantry.new
-    assert_equal ({}), pantry.stock
+    assert_equal ({}), @pantry.stock
+  end
+
+  def test_it_can_check_for_ingredient
+
   end
 end
 
 
-# pry(main)> ingredient2 = Ingredient.new({name: "Macaroni", unit: "oz", calories: 200})
+# pry(main)>
 # # => #<Ingredient:0x007fd88582ed98...>
 
 # pry(main)> pantry.stock_check(ingredient1)
